@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 app.use("*", async (req, res) => {
   try {
     const url = req.originalUrl.replace(base, "");
-    let targetPage = "pages/404.ts";
+    let targetPage = "pages/404";
     if (url === "") {
       targetPage = `pages/home`;
     } else if (pageFiles.includes(url)) {
